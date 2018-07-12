@@ -1,0 +1,54 @@
+/*********************************************************************
+** Program name: prog
+** Author: David Rider
+** Date: 2/18/2017
+** Description: CS 162 Lab 5: This program is a battle simulator. It 
+** contains a base monster class which all other classes inherit from.
+** It also contains another class (dragon) which inherits from monster
+** and acts as a parent class to two additional classes. lab5.cpp fills
+** an array of pointers to monster objects with random elements of the
+** child classes. 
+*********************************************************************/
+Prog version 1.0 2/19/2017
+
+PROGRAM CONTENTS
+lab5.cpp -main source file
+monster.hpp - contains the data members and functions
+monster.cpp - contains the functions definitions 
+goblin.hpp - contains the data members and functions
+goblin.cpp - contains the functions definitions 
+troll.hpp - contains the data members and functions
+troll.cpp - contains the functions definitions 
+dragon.hpp - contains the data members and functions
+dragon.cpp - contains the functions definitions
+iceDragon.hpp - contains the data members and functions
+iceDragon.cpp - contains the functions definitions 
+fireDragon.hpp - contains the data members and functions
+fireDragon.cpp - contains the functions definitions  
+
+COMPILING NOTES
+The included makefile requires the user to type "make all" into the terminal.
+After the object files are created, the user may run the program by typing 
+"prog" into the terminal.
+
+NOTES
+This program presented a few challenges. I am still experiencing a memory leak 
+for which I have no solution for. I attempted several varrying methods of allocation
+and deallocation, however, I am still experiencing a memory leak. It is
+certainly in my main function, and likely has to do with the assigning elements
+to the array of pointers to objects as new objects. However, I believe I implemented
+the correct deallocation method. So, either the leak is coming from somewhere else,
+or the allocation/deallocation process is flawed.
+
+Another problem was the Dragon class. I wasn't sure initially exactly how to have
+a class which was both derived and a parent. But I sat down and drew out a class 
+structure and realized I was overthinking the problem.
+
+One last problem was where to seed for a random value within the child classes. I 
+ended up implementing a solution be seeding a random time value in the monster class
+in the attact function.
+
+I think I learned how to implement class data structures with multiple base classes
+(like the dragon class). I also learned how to use different functions which inherit
+from the same base function (like attack()). I also learned to trust the pen and paper
+approach to designing data structures, rather than my usual code-first approach.
