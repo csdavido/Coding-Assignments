@@ -1,2 +1,2 @@
-# Coding-Assignments
-A collection of C++ assignments from Oregon State
+# Small-Projects
+A small C++ programs for learning purposes.
